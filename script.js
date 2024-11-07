@@ -1,32 +1,43 @@
 
 const inputUnit = document.querySelector('.input-unit');
 const selStyleOperator = document.querySelector('.sel-style operator');
-const inputStyle = document.querySelector('.inputstyle');
-const output = document.querySelector('#output')
+let inputStyle = document.querySelector('.inputstyle');
+const operator = document.querySelector('.operator')
 const calculate = document.querySelector('.calculate');
-const resulte = document.querySelector('.resulte');
-function calc(){
+let resulte = document.querySelector('.result');
+calculate.addEventListener("click",function calc(){
 let sum = 0;
-if(inputUnit.target.value = "L"){
-    sum = Number(inputStyle.value) / 1000;
+if(inputUnit.value == "L" && operator.value == "mL"){
+    sum = Number(inputStyle.value) * 1000;
+    console.log(Number(inputStyle.value) * 1000)
 }
-else if(inputUnit.target.value = "mL"){
-    sum = Number(inputStyle.value) * 1000 ;
-}
-else if(inputUnit.target.value = "m"){
+else if(inputUnit.value == "mL" && operator.value == "L"){
     sum = Number(inputStyle.value) / 1000 ;
+    console.log( Number(inputStyle.value) / 1000)
 }
-else if(inputUnit.target.value = "Km"){
-    sum = Number(inputStyle.value) * 1000 ;
-}
-else if(inputUnit.target.value = "g"){
+else if(inputUnit.value == "m" && operator.value == "Km"){
     sum = Number(inputStyle.value) / 1000 ;
+    console.log(Number(inputStyle.value) / 1000)
 }
-else(inputUnit.target.value = "Kg")
+else if(inputUnit.value == "Km" && operator.value == "m"){
     sum = Number(inputStyle.value) * 1000 ;
+    console.log( Number(inputStyle.value) * 1000)
+}
+else if(inputUnit.value == "g" && operator.value == "Kg"){
+    sum = Number(inputStyle.value) / 1000 ;
+    console.log(Number(inputStyle.value) / 1000)
+}
+else if(inputUnit.value == "Kg" && operator.value == "g"){
+    sum = Number(inputStyle.value) * 1000 ;
+    console.log( Number(inputStyle.value) * 1000)}
+else{
+    sum = "error";
+}    
 
-resulte.innerHTML = sum ;
+resulte.innerHTML= sum ;
+console.log(sum);
 }
-calculate.addEventListener("click",calc);
+)
+
    
 

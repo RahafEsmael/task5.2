@@ -1,11 +1,15 @@
-body{
-    background-image: url('siora-photography-cixohzDpNIo-unsplash.jpg');
-}
+
 nav , h2{
     width: 100%;
     text-align: center;
 }
-.first-form , .selectors , button{
+.result{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    color: hsla(29, 100%, 50%, 0.918);
+}
+.first-form , .selectors , button , .second-form{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -14,16 +18,20 @@ nav , h2{
    
 }
  .inputstyle{
+
     width: 100%;
     min-height: 10vh;
     background-color: #f47c0bea;
     border: none;
+    padding: 10px;
  }   
  .sel-style{
+    
     background-color: hwb(27 4% 2% / 0.518);
     border: none;
     margin: 0 5px;
  }
+
  .input-unit{
     background-color: hwb(27 4% 2% / 0.518);
     border: none;
@@ -33,4 +41,7 @@ button{
   
     background-color: hsla(24, 91%, 50%, 0.918);
     cursor: pointer;
+}
+button :hover{
+    background-color: hwb(24 4% 4% / 0.455);
 }
